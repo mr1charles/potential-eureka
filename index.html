@@ -1,0 +1,76 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>mstr — Learn deeply</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=Manrope:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="/style.css" />
+  </head>
+  <body>
+    <div class="shell">
+      <header>
+        <a class="brand" href="#">mstr<span>•</span></a>
+        <div class="session-label"><i></i> FOCUSED SESSION</div>
+        <button class="exit" type="button">Exit session <span>↗</span></button>
+      </header>
+
+      <main id="app">
+        <section class="intro" id="intro">
+          <div class="eyebrow">01 / START HERE</div>
+          <h1>What do you want<br>to <em>master?</em></h1>
+          <p class="lede">Choose a skill or paste in anything you’re working through. We’ll turn it into a focused learning session.</p>
+          <div class="topic-entry">
+            <input id="topicInput" aria-label="Topic to master" placeholder="e.g. Linear functions" autocomplete="off" />
+            <button id="beginBtn" type="button">Build my session <span>→</span></button>
+          </div>
+          <div class="suggestions"><span>TRY ONE</span><button>Linear functions</button><button>Spanish verb tenses</button><button>Public speaking</button></div>
+          <div class="how-it-works">
+            <div><b>01</b><span>Learn the idea</span></div><div><b>02</b><span>Practice actively</span></div><div><b>03</b><span>Get precise feedback</span></div>
+          </div>
+        </section>
+
+        <section class="lesson hidden" id="lesson">
+          <aside class="rail">
+            <div class="progress-ring"><span id="progressNumber">1</span><small>/ 3</small></div>
+            <div class="rail-line"><i></i></div>
+            <span class="rail-title">YOUR PATH</span>
+            <ol><li class="active"><b>01</b> Core idea</li><li><b>02</b> Work it out</li><li><b>03</b> Reflect & retain</li></ol>
+          </aside>
+          <div class="lesson-content">
+            <div class="lesson-top"><div><span class="eyebrow">YOUR LEARNING PATH</span><h2 id="lessonTitle">Linear functions</h2></div><span class="minute">~ 12 MIN</span></div>
+            <div class="concept-card" id="conceptCard">
+              <span class="card-tag">THE CORE IDEA</span>
+              <h3>A linear function describes a relationship with a <em>constant rate of change.</em></h3>
+              <p>Every time x changes by one unit, y changes by the same amount. That steady change is the slope.</p>
+              <div class="formula"><span>y</span> = <span>mx</span> + b <small>m = slope &nbsp;&nbsp; b = starting value</small></div>
+            </div>
+            <div class="question-head"><span class="card-tag">CHECK YOUR UNDERSTANDING</span><span class="question-count">01 / 03</span></div>
+            <h3 class="question">A line passes through (0, 3) and rises 2 units for every 1 unit it moves right. What is its equation?</h3>
+            <div class="answers" id="answers">
+              <button data-answer="wrong"><span>A</span> y = 3x + 2</button><button data-answer="right"><span>B</span> y = 2x + 3</button><button data-answer="wrong"><span>C</span> y = −2x + 3</button><button data-answer="wrong"><span>D</span> y = x + 3</button>
+            </div>
+            <div class="feedback hidden" id="feedback"><b>Exactly right.</b> The slope is 2 and the y-intercept is 3. You’ve identified both pieces of the equation.</div>
+            <div class="lesson-footer"><button class="text-btn" id="whyBtn">I need a hint <span>→</span></button><button class="next-btn" id="nextBtn" disabled>Continue <span>→</span></button></div>
+          </div>
+        </section>
+
+        <section class="practice hidden" id="practice">
+          <div class="practice-head"><button class="back" id="backBtn">← &nbsp; Back</button><span class="eyebrow">02 / WORK IT OUT</span><span class="minute">~ 7 MIN</span></div>
+          <div class="practice-grid">
+            <div><h2>Show your <em>thinking.</em></h2><p class="lede">You don’t need a polished answer. Write, type, or sketch through how you’d solve this one.</p><div class="prompt"><span>YOUR CHALLENGE</span><p>A gym charges a $15 sign-up fee, then $8 each month. Write a linear equation for the total cost after <em>m</em> months. What would it cost after 6 months?</p></div><button class="hint-button" id="hintPractice">+ Reveal a small hint</button></div>
+            <div class="work-card"><div class="work-top"><span>YOUR WORKSPACE</span><span>Auto-saved</span></div><textarea id="workArea" placeholder="Start wherever makes sense…"></textarea><div class="work-footer"><span>Use words, equations, or both.</span><button id="reviewBtn">Review my work <span>→</span></button></div></div>
+          </div>
+        </section>
+
+        <section class="review hidden" id="review">
+          <div class="review-card"><div class="spark">✦</div><span class="eyebrow">SESSION COMPLETE</span><h2>You found the pattern.</h2><p>Here’s what you’re taking with you from <strong>linear functions.</strong></p><div class="insights"><div><span>YOU UNDERSTAND</span><b>How slope and starting values build an equation</b></div><div><span>YOU PRACTICED</span><b>Turning a real situation into a linear model</b></div><div><span>NEXT TIME</span><b>Try graphing an equation from its slope and intercept</b></div></div><div class="mastery-row"><div><span>MASTERY TODAY</span><b>Strong foundation</b></div><div class="bar"><i></i></div><span>72%</span></div><button id="restartBtn">Start another session <span>→</span></button></div>
+        </section>
+      </main>
+      <footer><span>BUILT FOR REAL UNDERSTANDING</span><span>⌘ &nbsp; Keep your curiosity close.</span></footer>
+    </div>
+    <script src="/main.js"></script>
+  </body>
+</html>
